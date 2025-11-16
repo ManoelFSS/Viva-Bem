@@ -4,8 +4,8 @@
   padding: 0;
   box-sizing: border-box;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
 }
@@ -222,7 +222,8 @@ header .containner .content .content-btns {
     align-items: center;
   }
 }
-header .containner .content .content-btns .btn-agenda, header .containner .content .content-btns .btn-plus {
+header .containner .content .content-btns .btn-agenda,
+header .containner .content .content-btns .btn-plus {
   padding: 15px 60px;
   border-radius: 10px;
   border: none;
@@ -230,23 +231,25 @@ header .containner .content .content-btns .btn-agenda, header .containner .conte
   cursor: pointer;
 }
 @media (max-width: 1400px) {
-  header .containner .content .content-btns .btn-agenda, header .containner .content .content-btns .btn-plus {
+  header .containner .content .content-btns .btn-agenda,
+  header .containner .content .content-btns .btn-plus {
     padding: 15px 20px;
   }
 }
 @media (max-width: 530px) {
-  header .containner .content .content-btns .btn-agenda, header .containner .content .content-btns .btn-plus {
+  header .containner .content .content-btns .btn-agenda,
+  header .containner .content .content-btns .btn-plus {
     font-size: 1rem;
   }
 }
 header .containner .content .content-btns .btn-agenda {
-  background-color: #1173D4;
+  background-color: #1173d4;
   color: #fff;
 }
 header .containner .content .content-btns .btn-plus {
   background-color: #fff;
-  color: #1173D4;
-  border: solid 1px #1173D4;
+  color: #1173d4;
+  border: solid 1px #1173d4;
 }
 
 .containner-exames {
@@ -361,7 +364,7 @@ header .containner .content .content-btns .btn-plus {
 .containner-exames .cards .card img {
   height: 70px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 50%;
 }
 .containner-exames .cards .card h4 {
@@ -482,7 +485,7 @@ header .containner .content .content-btns .btn-plus {
 .preventivos .cards .card img {
   height: 120px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 50%;
 }
 .preventivos .cards .card h4 {
@@ -604,7 +607,7 @@ header .containner .content .content-btns .btn-plus {
 .box-alert .cards .card-text img {
   height: 40px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 50%;
 }
 .box-alert .cards .card-text h4 {
@@ -710,4 +713,4 @@ footer .copy {
   footer .copy {
     font-size: 1rem;
   }
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */
