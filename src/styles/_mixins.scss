@@ -1,0 +1,178 @@
+// _mixins.scss
+
+@mixin gradient-text($color-start, $color-end, $c1, $c2) {
+  background: linear-gradient(to right, $color-start, $color-end, $c1, $c2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin card-model($height-img, $width, $height, $color, $justify, $raio) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: $justify;
+  gap: 0.5rem;
+  border-radius: $raio;
+  height: $height;
+  width: $width;
+  padding: 1rem;
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.2);
+  background-color: $color;
+
+  @media (max-width: 480px) {
+    width: 100%;
+    height: auto;
+    padding: 1rem 1rem 3rem;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style: disc;
+    padding-left: 20px;
+    font-size: 1.4rem;
+  }
+
+  img {
+    height: $height-img;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  h4 {
+    font-size: 2rem;
+    padding: 10px 0;
+    @media (max-width: 480px) {
+      font-size: 1.7rem;
+    }
+    @media (max-width: 360px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  p {
+    font-size: 1.8rem;
+    text-align: center;
+    @media (max-width: 360px) {
+      font-size: 1.2rem;
+    }
+  }
+  
+}
+
+@mixin flexBox($flex, $direction, $align, $justify, $padding, $gap, $wrap) {
+  display: $flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  padding: $padding;
+  gap: $gap;
+  flex-wrap: $wrap;
+}
+
+
+@mixin title ($width, $font-size) {
+  width: $width;
+  font-size: $font-size;
+
+  @media (max-width: 1400px) {
+    @if $width == "auto" {
+      width: auto;
+    } @else {
+       width: 500px;
+    }
+
+    font-size: 4rem;
+  }
+
+  @media (max-width: 1110px) {
+    font-size:3rem;
+    width: auto;
+    text-align: center;
+    padding: 0px 20px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 2.2rem;
+  }
+}
+
+@mixin paragrafo ($width, $font-size) {
+  width: $width;
+  font-size: $font-size;
+
+  @media (max-width: 1400px) {
+    @if $width == "auto" {
+      width: auto;
+    } @else {
+      width: 400px;
+    }
+    font-size: 1.8rem ;
+  }
+
+  @media (max-width: 1110px) {
+    @if $width == "auto" {
+      width: auto;
+    } @else {
+      width: 350px;
+    }
+   
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  @media (max-width: 375px) {
+     @if $width == "auto" {
+      width: auto;
+    } @else {
+      width: 300px;
+    }
+    font-size: 1.4rem;
+  }
+}
+
+
+@mixin card-text($height-img, $width, $height,  $justify, $raio,) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: $justify;
+  gap: 0.5rem;
+  border-radius: $raio;
+  height: $height;
+  max-width: $width;
+  min-width: 280px;
+  padding: 0.6rem 1rem;
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.2);
+
+  img {
+    height: $height-img;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+    @media (max-width: 480px) {
+      font-size: 1.4rem;
+    }
+    @media (max-width: 375px) {
+      font-size: 1.3rem;
+    }
+  }
+
+  p {
+    font-size: 1.4rem;
+    text-align: center;
+
+    @media (max-width: 500px) {
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 375px) {
+      font-size: 1rem;
+    }
+  }
+
+}

@@ -1,0 +1,32 @@
+@import './mixins';
+
+.containner-exames {
+  background-color: #f8f9fa;
+  @include flexBox(flex, column, center, none,  50px 10px,  none, none);
+  
+  .Text-area {
+    @include flexBox(flex, column, center, none, none,  40px, none);
+
+
+    h3 {
+      text-align: center;
+      @include title("auto", 4.5rem);
+      @include gradient-text(#4249a1, #4249a1, #50ad94, #50ad94);
+    }
+
+    p {
+      @include paragrafo("auto", 1.7rem);
+      width: 70%;
+      text-align: center;
+    }
+  }
+
+  .cards {
+    width: 100%;
+    @include flexBox(flex, none, center, center, 50px 10px,  50px, wrap);
+
+    .card {
+      @include card-model(70px, 400px, 280px, #ffffff, center, 10px);
+    }
+  }
+}

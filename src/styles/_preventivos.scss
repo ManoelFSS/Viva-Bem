@@ -1,0 +1,42 @@
+@import './mixins';
+
+//             $flex, $direction, $align, $justify, $padding,  $gap, $wrap
+.preventivos {
+   @include flexBox(flex, column, center, none,  50px 10px,  none, none);
+
+   h3 {
+    @include title("auto", 4rem);
+    @include gradient-text( #f9016f, #930885, #d038aa, #930885);
+   }
+
+   .text-masc {
+      @include gradient-text( #3373d2, #6f95c7, #7bb5f5, #3373d2);
+   }
+
+   .box {
+      @include flexBox(flex, none, center, center,  none,  50px, wrap);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+   }
+
+  .cards {
+    width: 100%;
+    @include flexBox(flex, column, center, center, 50px 10px,  50px, wrap);
+
+    .card {
+      @include card-model(120px, 380px, 560px, #ffffff, "", 30px );
+    }
+  }
+}
+
+
+
+#box-masc {
+  background-color: #f8f9fa;
+}
+
+#box-femin {
+  background-color: #fdefef;
+}

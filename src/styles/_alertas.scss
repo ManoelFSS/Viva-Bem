@@ -1,0 +1,57 @@
+@import './mixins';
+
+.box-alert {
+  @include flexBox(flex, column, center, none,  50px 10px,  none, none);
+
+  .title {
+    @include title("auto", 4rem);
+    @include gradient-text(#4249a1, #4249a1, #50ad94, #50ad94);
+  }
+
+  .box {
+      @include flexBox(flex, none, center, center,  none,  50px, wrap);
+   }
+
+  .box {
+    width: 100%;
+    @include flexBox(flex, none, center, center,  none,  70px, wrap);
+    
+    .box-img {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-top: 5px;
+
+    }
+   }
+
+   .cards {
+    width: 100%;
+    @include flexBox(flex, column, center, center, 50px 10px,  50px, wrap);
+
+    // $height-img, $width, $height, $color, $justify, $raio
+    .card-text{
+      @include card-text(40px, 600px, 180px,  center, 10px );
+    }
+
+    .card-rosa {
+      background-color: #f9d5e5;
+      color: #ad346a
+    }
+    .card-azul {
+      background-color: #cfe2f3;
+      color: #2769a3
+    }
+    .card-verde {
+      background-color: #d4edda;
+      color: #244a2d
+    }
+    .card-amarelo {
+      background-color: #ffe9c2;
+      color: #976c00
+    }
+
+  }
+
+}
